@@ -3,6 +3,15 @@ package com.sqzn.tea.Beans;
 public class FoodMateriel {
     private String name;
     private String unit;
+    private int num;//数量 ：-1适量
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
 
     public String getName() {
         return name;

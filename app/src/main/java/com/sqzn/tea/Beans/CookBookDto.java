@@ -7,26 +7,38 @@ import org.greenrobot.greendao.annotation.Generated;
 import java.util.List;
 
 @Entity
-public class TeaDto {
+public class CookBookDto {
+    private String id;
     private String pictureImgUrl;
     private String name;
+    private String author;
     private String introduction;
 
     @Convert(converter = FoodMaterielConvert.class, columnType = String.class)
     private List<FoodMateriel> foodMaterielList;
+    @Convert(converter = StepConvert.class, columnType = String.class)
+    private List<Step> steps;
 
-    @Generated(hash = 62748101)
-    public TeaDto(String pictureImgUrl, String name, String introduction,
-            List<FoodMateriel> foodMaterielList) {
+
+
+    @Generated(hash = 142886395)
+    public CookBookDto(String id, String pictureImgUrl, String name, String author,
+            String introduction, List<FoodMateriel> foodMaterielList,
+            List<Step> steps) {
+        this.id = id;
         this.pictureImgUrl = pictureImgUrl;
         this.name = name;
+        this.author = author;
         this.introduction = introduction;
         this.foodMaterielList = foodMaterielList;
+        this.steps = steps;
     }
 
-    @Generated(hash = 276906914)
-    public TeaDto() {
+    @Generated(hash = 976864834)
+    public CookBookDto() {
     }
+
+   
 
     public String getName() {
         return this.name;
@@ -58,6 +70,30 @@ public class TeaDto {
 
     public void setFoodMaterielList(List<FoodMateriel> foodMaterielList) {
         this.foodMaterielList = foodMaterielList;
+    }
+
+    public List<Step> getSteps() {
+        return this.steps;
+    }
+
+    public void setSteps(List<Step> steps) {
+        this.steps = steps;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

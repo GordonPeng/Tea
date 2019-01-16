@@ -12,11 +12,11 @@ import com.sqzn.tea.R;
 
 import java.util.List;
 
-public class FoodMaterielAdapter extends BaseAdapter {
+public class ListFoodMaterielAdapter extends BaseAdapter {
     private List<FoodMateriel> data;
     private Context context;
 
-    public FoodMaterielAdapter(Context context, List<FoodMateriel> data) {
+    public ListFoodMaterielAdapter(Context context, List<FoodMateriel> data) {
         this.context = context;
         this.data = data;
     }

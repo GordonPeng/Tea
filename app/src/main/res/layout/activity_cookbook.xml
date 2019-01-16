@@ -12,6 +12,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
 
@@ -37,30 +39,63 @@
                 android:id="@+id/introduction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
                 android:padding="@dimen/dm030"
                 android:text="@string/introduction"
-                android:lineSpacingExtra="5dp"
                 android:textColor="@color/text_body"
                 android:textSize="@dimen/dm020" />
 
             <TextView
-                android:textSize="@dimen/dm025"
-                android:textColor="@color/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="@dimen/dm030"
                 android:paddingBottom="@dimen/dm030"
-                android:layout_width="match_parent"
                 android:text="—食材清单—"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/dm025" />
 
             <ListView
                 android:id="@+id/lv_food_materiel_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dm020" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/dm030"
+                android:paddingBottom="@dimen/dm030"
+                android:text="—制作步骤—"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/dm025" />
+
+            <ListView
+                android:id="@+id/steps"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"></ListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/dm030"
+                android:paddingBottom="@dimen/dm030"
+                android:text="—小贴士—"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/dm025" />
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:padding="@dimen/dm030"
+                android:text="@string/introduction"
+                android:textColor="@color/text_body"
+                android:textSize="@dimen/dm020" />
 
         </LinearLayout>
     </ScrollView>
